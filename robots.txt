@@ -1,0 +1,8 @@
+# robots.txt
+
+# Autoriser tous les robots à explorer l'ensemble du site
+User-agent: *
+Disallow:
+
+# Spécifier l'emplacement du sitemap (si disponible)
+Sitemap: https://aresla.vercel.app//sitemap.xml

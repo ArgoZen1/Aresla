@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
     },
     { image: "/images/js-min.webp", title: "Certification JavaScript WITH HONORS" },
     {
-      image: "/images/Ts-min.webp",
+      image: "/images/ts-min.webp",
       title: "Certification TypeScript WITH HONORS",
     },
   ];
