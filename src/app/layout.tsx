@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     images: [
       {
-        url: 'https://www.aresla.fr/images/test123456.png',
+        url: 'https://www.aresla.fr/images/banner1.png',
         width: 600,
         height: 400,
         alt: 'Développeur Web JavaScript & Coach Emploi',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Création de Site Internet Pas Cher | coach recherche d'emploi",
     description: 'Services de création de site internet abordables à Rennes, Concarneau et Quimper. Spécialisé en sites portfolio, mariage et applications web personnalisées.',
-    images: ['https://www.aresla.fr/images/test123456.png'], // URL absolue de l'image
+    images: ['https://www.aresla.fr/images/banner1.png'], // URL absolue de l'image
   },
 }
 
