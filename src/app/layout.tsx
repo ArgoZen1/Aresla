@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.aresla.fr/images/test123456.png',
-        width: 800,
-        height: 600,
+        width: 600,
+        height: 400,
         alt: 'Développeur Web JavaScript & Coach Emploi',
       },
     ],
