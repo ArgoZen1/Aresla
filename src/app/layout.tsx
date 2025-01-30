@@ -49,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <Head>
+      <meta name="google-site-verification" content="yAvw0GosmXRExBBdRL3_3YFSutKAMIaXKp_qEQKJ1Y4" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Ajoutez d'autres balises meta si nécessaire */}
       </Head>
