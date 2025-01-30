@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
     },
     {
       category: "Outils",
-      items: ["Git", "VS Code", "Jest", "Webpack", "Postman", "Figma", "canva"],
+      items: ["Git", "VS Code", "Jest", "Webpack", "Postman", "Figma", "Canva"],
     },
     {
       category: "Soft Skills",
@@ -92,7 +92,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Section des certifications */}
-        <div className="bg-[#222222] p-8 rounded-lg">
+        <div className="bg-[#222222] p-8 rounded-lg mb-14">
           <div className="flex items-center justify-center mb-8">
             <Trophy className="w-12 h-12 text-[#FFDD58] mr-4" />
             <h3 className="text-3xl font-extrabold bg-gradient-to-r from-[#FFDD58] to-[#FF954E] bg-clip-text text-transparent">

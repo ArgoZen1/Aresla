@@ -1,8 +1,25 @@
-# robots.txt
+# robots.txt pour https://www.aresla.fr
+# Dernière mise à jour : 2025-01-30
 
-# Autoriser tous les robots à explorer l'ensemble du site
 User-agent: *
-Disallow:
+# Bloquer l'accès aux répertoires sensibles
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /api/
 
-# Spécifier l'emplacement du sitemap (si disponible)
-Sitemap: https://aresla.vercel.app//sitemap.xml
+# Autoriser l'accès à toutes les autres pages
+Allow: /
+
+# Spécifier l'emplacement du sitemap
+Sitemap: https://www.aresla.fr/sitemap.xml
+
+# Ne pas bloquer les ressources essentielles
+Allow: /styles/
+Allow: /scripts/
+Allow: /images/
+
+# Définir un délai de crawl pour tous les robots
+Crawl-delay: 10

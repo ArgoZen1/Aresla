@@ -27,18 +27,14 @@ const Hero: React.FC = () => {
         </div>
 
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          Mentor & Développeur
+          Développeur
           <span className="block mt-2 bg-gradient-to-r from-[#FFDD58] to-[#FF954E] bg-clip-text text-transparent">
-            JavaScript
+          JavaScript <span className="text-white">& Coach</span>
           </span>
         </h1>
 
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          J’aime transformer des idées en projets concrets, qu’il s’agisse
-          d’applications web, de bots personnalisés ou d’algorithmes plus 
-          efficaces. Ce qui me passionne encore plus, c’est partager mes 
-          connaissances et accompagner les développeurs à chaque étape 
-          de leur progression.
+        Expert en création de <strong>site web pas cher</strong>, je propose des solutions adaptées pour vos sites internet. Je combine mes compétences en JavaScript avec un accompagnement personnalisé. En tant que Coach & Développeur, je m’engage à transformer vos idées en applications web performantes tout en soutenant votre développement professionnel.
         </p>
 
         <div className="flex justify-center space-x-4">
@@ -51,10 +47,10 @@ const Hero: React.FC = () => {
           </Link>
           {/* Lien interne vers #projets */}
           <Link
-            href="/#projets"
+            href="/#tarifs"
             className="inline-block border-2 border-[#FFDD58] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#FFDD58] hover:text-[#222222] transition-all"
           >
-            Voir mes projets
+            Mes tarifs
           </Link>
         </div>
 

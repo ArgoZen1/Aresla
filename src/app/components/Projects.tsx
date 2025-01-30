@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
                 </h2>
               </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {projects.map((project) => (
             <div key={project.title} className="bg-[#2A2A2A] rounded-lg overflow-hidden">
               {/* Conteneur pour l'image avec position relative pour Next.js Image */}

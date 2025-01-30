@@ -8,6 +8,7 @@ interface PricingCardProps {
   title: string;
   price: string;
   originalPrice?: string;
+  discount?: number; // Nouveau champ pour la réduction en pourcentage
   subtitle: string;
   features: string[];
   icon: React.ReactNode;
@@ -22,6 +23,7 @@ const Pricing: React.FC = () => {
     "Formulaire de contact",
     "Hébergement inclus",
     "Nom de domaine à prix réduit",
+    "certificat SSL gratuit",
     "Support technique 2 mois"
   ];
 
@@ -31,7 +33,8 @@ const Pricing: React.FC = () => {
     "Panel d'administration",
     "Hébergement 24/7",
     "Maintenance incluse",
-    "Support prioritaire"
+    "Support prioritaire",
+    'Bot entierement sécurisé'
   ];
 
   const mentorshipFeatures: string[] = [
@@ -40,7 +43,25 @@ const Pricing: React.FC = () => {
     "Support par Discord / Whatsapp",
     "Plan de progression personnalisé",
     "Revue de CV, profil LinkedIn",
-    "Conseils en développement"
+    "Conseils en développement",
+    "Accès à des ressources exclusives",
+    "Sessions de codage en direct",
+    "Séances de révision de code",
+    "Optimisation de votre portfolio en ligne"
+
+  ];
+
+  const siteFeaturesAvancee: string[] = [
+    "Design responsive moderne et avancée",
+    "Design et UX Améliorés à votre image",
+    "Optimisation SEO très avancée",
+    "Formulaire de contact avancée",
+    "Hébergement inclus",
+    "Nom de domaine offert pendant 1 an",
+    "Support technique 6 mois",
+    "Intégration des Réseaux Sociaux",
+    "Animations et transitions interactives",
+    "Galleries d'images (exemple pour votre mariage)"
   ];
 
   // Définition des cartes de tarification avec les icônes appropriées
@@ -49,6 +70,7 @@ const Pricing: React.FC = () => {
       title: "Site Vitrine",
       price: "150€",
       originalPrice: "300€",
+      discount: 50, // Réduction de 50%
       subtitle: "Offre limitée",
       features: siteFeatures,
       icon: <Globe className="w-12 h-12 text-[#FFDD58] mx-auto mb-4" />,
@@ -69,12 +91,22 @@ const Pricing: React.FC = () => {
       features: mentorshipFeatures,
       icon: <User className="w-12 h-12 text-[#FFDD58] mx-auto mb-4" />,
       buttonText: "S'inscrire"
-    }
+    },
+    {
+      title: "Site Vitrine avancée",
+      price: "455€",
+      originalPrice: "650€",
+      discount: 30, // Réduction de 30%
+      subtitle: "Offre limitée",
+      features: siteFeaturesAvancee,
+      icon: <Globe className="w-12 h-12 text-[#FFDD58] mx-auto mb-4" />,
+      buttonText: "Commander maintenant"
+    },
   ];
 
   return (
-    <section id="tarifs" className="py-20 bg-[#2A2A2A]">
-      <div className="container mx-auto px-4">
+    <section id="tarifs" className="py-20 bg-[#2A2A2A] w-full">
+      <div className="w-full px-4">
         {/* Titre de la section */}
         <div className="flex items-center justify-center mb-16">
           <ShoppingCart className="w-8 h-8 text-[#FFDD58] mr-3" />
@@ -84,16 +116,16 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Cartes de tarification */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full text-center">
           {pricingCards.map((card) => (
             <div
               key={card.title}
               className="bg-[#222222] rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between"
             >
-              {/* Si la carte a un prix original, afficher la bannière */}
-              {card.originalPrice && (
+              {/* Si la carte a un prix original et une réduction, afficher la bannière */}
+              {card.originalPrice && card.discount && (
                 <div className="absolute -right-10 top-3 bg-[#FFDD58] text-[#222222] py-1 px-12 rotate-45 font-semibold">
-                  -50%
+                  -{card.discount}%
                 </div>
               )}
 
@@ -104,19 +136,21 @@ const Pricing: React.FC = () => {
 
                 <h3 className="text-2xl font-bold text-white mb-4">{card.title}</h3>
                 <div className="flex justify-center items-center gap-4 mb-2">
-                  <span className={`text-4xl font-bold ${card.originalPrice ? 'text-[#FFDD58]' : 'text-[#FFDD58]'}`}>
+                  <span className="text-4xl font-bold text-[#FFDD58]">
                     {card.price}
                   </span>
                   {card.originalPrice && (
-                    <span className="text-xl text-gray-400 line-through ">{card.originalPrice}</span>
+                    <span className="text-xl text-gray-400 line-through">
+                      {card.originalPrice}
+                    </span>
                   )}
                 </div>
-                <p className="text-gray-300 mb-6 ">{card.subtitle}</p>
+                <p className="text-gray-300 mb-6">{card.subtitle}</p>
 
                 {/* Fonctionnalités de la carte */}
                 <div className="space-y-4">
                   {card.features.map((feature, index) => (
-                    <div key={index} className="flex items-center text-gray-300" >
+                    <div key={index} className="flex items-center text-gray-300">
                       <Check className="w-5 h-5 text-[#FFDD58] mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </div>
